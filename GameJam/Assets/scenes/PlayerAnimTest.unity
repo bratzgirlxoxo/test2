@@ -285,6 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 0.15
+  player: {fileID: 0}
+  tran: {fileID: 0}
 --- !u!4 &1918823717
 Transform:
   m_ObjectHideFlags: 0
@@ -292,8 +294,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1918823713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4022, y: 0.5996, z: 6.19056}
-  m_LocalScale: {x: 12.187087, y: 12.187087, z: 12.187087}
+  m_LocalPosition: {x: -1.612, y: 0.132, z: 6.19056}
+  m_LocalScale: {x: 8.959028, y: 8.959028, z: 8.959028}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
