@@ -171,11 +171,12 @@ public class AI : MonoBehaviour {
 		{
 			nextNode = counter + 1;
 		}
-		
-		
+
+				
 
 		moveDir = CheckNext(nodes[counter], nodes[nextNode]);
 		print("counter: " + counter);
 		print("next: " + nextNode);
+		print("movedir: " + moveDir);
 	}
 }
