@@ -21,6 +21,8 @@ public class AI : MonoBehaviour {
 	// public fields
 	public float movementSpeed;
 
+	private int nextNode;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -30,6 +32,8 @@ public class AI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		MoveBetween(moveDir);
+		print(counter);
+		
 	}
 
 	
@@ -134,13 +138,17 @@ public class AI : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		Transform node = other.gameObject.transform;
-		int nextNode;
+		if (nextNode == 0)
+		{
+			counter = 0;
+		}
 
-		for (int i = 0; i < nodes.Length; i++)
+		for (int i = counter; i < nodes.Length; i++)
 		{
 			if (nodes[i].Equals(node))
 			{
 				counter = i;
+				break;
 			}
 		}
 
@@ -154,5 +162,6 @@ public class AI : MonoBehaviour {
 		}
 
 		moveDir = CheckNext(nodes[counter], nodes[nextNode]);
+		print(nextNode);
 	}
 }
