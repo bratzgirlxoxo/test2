@@ -32,7 +32,7 @@ public class AI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		MoveBetween(moveDir);
-		print(counter);
+		
 		
 	}
 
@@ -138,19 +138,30 @@ public class AI : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		Transform node = other.gameObject.transform;
-		if (nextNode == 0)
-		{
-			counter = 0;
-		}
 
-		for (int i = counter; i < nodes.Length; i++)
+		if (nextNode < counter)
 		{
-			if (nodes[i].Equals(node))
+			for (int i = 0; i < nodes.Length; i++)
 			{
-				counter = i;
-				break;
+				if (nodes[i].Equals(node))
+				{
+					counter = i;
+					break;
+				}
 			}
 		}
+		else
+		{
+			for (int i = counter; i < nodes.Length; i++)
+			{
+				if (nodes[i].Equals(node))
+				{
+					counter = i;
+					break;
+				}
+			}
+		}
+		
 
 		if (counter == nodes.Length - 1)
 		{
@@ -160,8 +171,11 @@ public class AI : MonoBehaviour {
 		{
 			nextNode = counter + 1;
 		}
+		
+		
 
 		moveDir = CheckNext(nodes[counter], nodes[nextNode]);
-		print(nextNode);
+		print("counter: " + counter);
+		print("next: " + nextNode);
 	}
 }
