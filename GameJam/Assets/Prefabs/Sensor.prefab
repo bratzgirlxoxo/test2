@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4643859219648334}
   - component: {fileID: 212396961907081956}
+  - component: {fileID: 114437498841748094}
   m_Layer: 0
   m_Name: Sensor
   m_TagString: Untagged
@@ -33,13 +34,25 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088420934193354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.07, y: 1.68, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12, y: 1.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114437498841748094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088420934193354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4f8983c403ce44f8459f9a73e70b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 0
 --- !u!212 &212396961907081956
 SpriteRenderer:
   m_ObjectHideFlags: 1
